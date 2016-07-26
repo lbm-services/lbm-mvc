@@ -1,0 +1,21 @@
+{
+    "name": "lbm-services/MVC",
+    "description": "Basic MVC-Framework for PHP-Applications",
+    "license": "MIT",
+    "keywords": ["mvc"],
+    "authors": [
+        {
+            "name": "Horst Lindlbauer",
+            "email": "info@lbm-services.de"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lbm\\Mvc\\": "app"
+        }
+    }
+}
