@@ -1,8 +1,8 @@
 <?php
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
-use Lbm\Mvc\Request;
+use Lbm\Mvc\Core\Request;
 
 class CommandResolver
 {
@@ -41,7 +41,7 @@ class CommandResolver
         $this->params = array_values($url);
 
         $class = "Lbm\Mvc\Controllers\\{$controller}Controller";
-        $file = __DIR__ . "/Controllers/{$controller}Controller.php";
+        $file = __DIR__ . "/../Controllers/{$controller}Controller.php";
         if (!file_exists($file)) {
             return false;
         }

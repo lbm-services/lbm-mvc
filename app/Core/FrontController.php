@@ -1,12 +1,12 @@
 <?php
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
-use Lbm\Mvc\Response;
-use Lbm\Mvc\Request;
-use Lbm\Mvc\CommandResolver;
-use Lbm\Mvc\Filter;
-use Lbm\Mvc\FilterChain;
+use Lbm\Mvc\Core\Response;
+use Lbm\Mvc\Core\Request;
+use Lbm\Mvc\Core\CommandResolver;
+use Lbm\Mvc\Core\Filter;
+use Lbm\Mvc\Core\FilterChain;
 use Lbm\Mvc\Filters\HttpAuthFilter;
 
 
@@ -45,13 +45,16 @@ class FrontController
         $params = $this->resolver->getParams();
         array_unshift($params, $response);
         array_unshift($params, $request);
-        
-        $controller = new $command;
 
+        try {
+        $controller = new $command;
+        } catch (Exception $e) {
+            die($e->message());
+        }
         if (isset($controller) && is_object($controller)) {
             $reflect = new \ReflectionClass(get_class($controller));
             $controllerName = $reflect->getShortName();
-            
+
             switch ($controllerName) {
                 case 'AdminController':
                     $authFilter = new HttpAuthFilter(1);

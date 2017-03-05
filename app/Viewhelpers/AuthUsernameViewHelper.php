@@ -2,9 +2,8 @@
 
 namespace Lbm\Mvc\Viewhelpers;
 
-use Lbm\Mvc\Registry;
-use Lbm\Mvc\Request;
-use Lbm\Mvc\ViewHelper;
+use Lbm\Mvc\Core\Registry;
+use Lbm\Mvc\Core\Request;
 
 class AuthUsernameViewHelper implements ViewHelper
 {

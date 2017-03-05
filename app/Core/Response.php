@@ -1,6 +1,6 @@
 <?php
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
 interface Response
 {

@@ -2,10 +2,10 @@
 
 namespace Lbm\Mvc\Filters;
 
-use Lbm\Mvc\Filter as Filter;
-use Lbm\Mvc;
-use Lbm\Mvc\Request;
-use Lbm\Mvc\Response;
+use Lbm\Mvc\Core\Filter as Filter;
+use Lbm\Mvc\Core\Db;
+use Lbm\Mvc\Core\Request;
+use Lbm\Mvc\Core\Response;
 use Lbm\Mvc\Models;
 use Lbm\Mvc\Controllers;
 
@@ -20,7 +20,7 @@ class HttpAuthFilter implements Filter
     public function __construct($level)
     {
         $this->level = $level;
-        $this->db = Mvc\DB::getInstance();
+        $this->db = DB::getInstance();
         $this->users = new Models\User($this->db);
     }
 
@@ -50,6 +50,6 @@ class HttpAuthFilter implements Filter
         exit();
     }
 
-  
+
 
 }

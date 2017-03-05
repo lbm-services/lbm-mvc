@@ -1,9 +1,10 @@
 <?php
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
-use Lbm\Mvc\Request;
-use Lbm\Mvc\Response;
+use Lbm\Mvc\Core\Request;
+use Lbm\Mvc\Core\Response;
+use Lbm\Mvc\Core\TemplateView;
 
 class HtmlTemplateView implements TemplateView
 {

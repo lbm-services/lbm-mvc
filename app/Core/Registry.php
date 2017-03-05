@@ -1,9 +1,9 @@
 <?php
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
-use Lbm\Mvc\Response;
-use Lbm\Mvc\Request;
+use Lbm\Mvc\Core\Response;
+use Lbm\Mvc\Core\Request;
 
 class Registry
 {

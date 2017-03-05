@@ -3,13 +3,11 @@
 namespace Lbm\Mvc\Controllers;
 
 
-use Lbm\Mvc;
-use Lbm\Mvc\Response;
-use Lbm\Mvc\Request;
-use Lbm\Mvc\HtmlTemplateView;
+use Lbm\Mvc\Core\Db;
+use Lbm\Mvc\Core\Response;
+use Lbm\Mvc\Core\Request;
+use Lbm\Mvc\Core\HtmlTemplateView;
 use \Lbm\Mvc\Models;
-
-use Lbm\Mvc\Controller as Controller;
 
 
 class AdminController implements Controller
@@ -21,13 +19,13 @@ class AdminController implements Controller
 
     public function __construct()
     {
-        $this->db = Mvc\Db::getInstance();
+        $this->db = Db::getInstance();
         $this->users = new Models\User($this->db);
     }
 
     /**
      * function index
-     * 
+     *
      * @param Request $request
      * @param Response $response
      */
@@ -43,7 +41,7 @@ class AdminController implements Controller
 
     /**
      * function addUser
-     *      
+     *
      * @param Request $request
      * @param Response $response
      */
@@ -74,8 +72,8 @@ class AdminController implements Controller
 
     /**
      * function deleteUser
-     * 
-     * 
+     *
+     *
      * @param Request $request
      * @param Response $response
      * @param type $user_id
@@ -91,7 +89,7 @@ class AdminController implements Controller
 
     /**
      * function editUser
-     * 
+     *
      * @param Request $request
      * @param Response $response
      * @param type $user_id
@@ -111,7 +109,7 @@ class AdminController implements Controller
 
     /**
      * function updateUser
-     * 
+     *
      * @param Request $request
      * @param Response $response
      */
@@ -130,7 +128,7 @@ class AdminController implements Controller
 
     /**
      * private function _validate
-     * 
+     *
      * @param type $data
      * @return array
      */

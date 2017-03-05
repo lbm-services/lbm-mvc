@@ -1,5 +1,5 @@
 <?php
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
 interface Request {
     public function getParameterNames();

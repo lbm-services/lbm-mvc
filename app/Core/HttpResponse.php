@@ -1,8 +1,8 @@
 <?php
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
-use Lbm\Mvc\Response;
+use Lbm\Mvc\Core\Response;
 
 
 class HttpResponse implements Response

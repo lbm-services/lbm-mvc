@@ -2,12 +2,11 @@
 
 namespace Lbm\Mvc\Controllers;
 
-use Lbm\Mvc;
-use Lbm\Mvc\Response;
-use Lbm\Mvc\Request;
-use Lbm\Mvc\HtmlTemplateView;
+use Lbm\Mvc\Core\Response;
+use Lbm\Mvc\Core\Request;
+use Lbm\Mvc\Core\HtmlTemplateView;
+use Lbm\Mvc\Core\Db;
 use \Lbm\Mvc\Models;
-use Lbm\Mvc\Controller as Controller;
 
 class HomeController implements Controller
 {
@@ -19,7 +18,7 @@ class HomeController implements Controller
 
     public function __construct()
     {
-        $this->db = Mvc\Db::getInstance();
+        $this->db = Db::getInstance();
         $this->pages = new Models\Page($this->db);
     }
 

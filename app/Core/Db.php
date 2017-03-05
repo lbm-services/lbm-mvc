@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lbm\Mvc;
+namespace Lbm\Mvc\Core;
 
 class Db
 {
