@@ -1,7 +1,7 @@
 <?php
 
 
-define('URL', '/lbm-mvc/');
+define('URL', 'http://' . $_SERVER['HTTP_HOST'] . str_replace('public', '', dirname($_SERVER['SCRIPT_NAME'])));
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
