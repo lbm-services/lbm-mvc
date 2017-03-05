@@ -32,8 +32,8 @@
                             <td><a href="<?php echo htmlspecialchars($instrument->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($instrument->link, ENT_QUOTES, 'UTF-8'); ?></a></td>
                         <?php } ?>
                     
-                    <td><a class="deleteLink" href="<?php echo URL . 'instrument/deleteinstrument/' . htmlspecialchars($instrument->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
-                    <td><a href="<?php echo URL . 'instrument/editinstrument/' . htmlspecialchars($instrument->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
+                    <td><a class="deleteLink" href="<?php echo URL . '/' . 'instrument/deleteinstrument/' . htmlspecialchars($instrument->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
+                    <td><a href="<?php echo URL . '/' . 'instrument/editinstrument/' . htmlspecialchars($instrument->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
                 </tr>
             <?php } ?>
             </tbody>

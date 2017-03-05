@@ -35,8 +35,8 @@
                             <td><a href="<?php echo htmlspecialchars($instrument->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($instrument->link, ENT_QUOTES, 'UTF-8'); ?></a></td>
                         <?php } ?>
                     
-                    <td><a class="deleteLink" href="<?php echo URL . 'user/deleteinstrument/' . htmlspecialchars($instrument->fk_Instrument_id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
-                    <td><a href="<?php echo URL . 'user/editinstrument/' . htmlspecialchars($instrument->fk_Instrument_id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
+                    <td><a class="deleteLink" href="<?php echo URL . '/' . 'user/deleteinstrument/' . htmlspecialchars($instrument->fk_Instrument_id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
+                    <td><a href="<?php echo URL . '/' . 'user/editinstrument/' . htmlspecialchars($instrument->fk_Instrument_id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
                 </tr>
             <?php } ?>
             </tbody>
@@ -70,7 +70,7 @@
                             <td><a href="<?php echo htmlspecialchars($instrument->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($instrument->link, ENT_QUOTES, 'UTF-8'); ?></a></td>
                         <?php } ?>
                     
-                    <td><a href="<?php echo URL . 'user/editInstrument/' . htmlspecialchars($instrument->id, ENT_QUOTES, 'UTF-8'); ?>">Add to Depot</a></td>
+                    <td><a href="<?php echo URL . '/' . 'user/editInstrument/' . htmlspecialchars($instrument->id, ENT_QUOTES, 'UTF-8'); ?>">Add to Depot</a></td>
                 </tr>
             <?php } ?>
             </tbody>

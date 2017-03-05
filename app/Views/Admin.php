@@ -42,8 +42,8 @@
                             <td><a href="<?php echo htmlspecialchars($user->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($user->link, ENT_QUOTES, 'UTF-8'); ?></a></td>
                         <?php } ?>
                     
-                    <td><a class="deleteLink" href="<?php echo URL . 'admin/deleteuser/' . htmlspecialchars($user->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
-                    <td><a href="<?php echo URL . 'admin/edituser/' . htmlspecialchars($user->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
+                    <td><a class="deleteLink" href="<?php echo URL . '/' . 'admin/deleteuser/' . htmlspecialchars($user->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
+                    <td><a href="<?php echo URL . '/' . 'admin/edituser/' . htmlspecialchars($user->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
                 </tr>
             <?php } ?>
             </tbody>

@@ -3,7 +3,7 @@
     <!-- add instrument form -->
     <div>
         <h3>Add/Edit Instrument</h3>
-        <form action="<?php echo URL . (isset($this->instrument->fk_Instrument_id) ? 'user/updateInstrument' : 'user/addInstrument') ?>" method="POST">
+        <form action="<?php echo URL . '/' . (isset($this->instrument->fk_Instrument_id) ? 'user/updateInstrument' : 'user/addInstrument') ?>" method="POST">
             <label>Amount</label>
             <input autofocus type="text" name="amount" value="<?php isset($this->instrument->anzahl) ? 
                         print(htmlspecialchars($this->instrument->anzahl, ENT_QUOTES, 'UTF-8'))

@@ -1,6 +1,6 @@
 
         <div class="box">
-            <form action="<?php echo URL . (isset($this->page->id) ? 'page/updatepage' : 'page/addpage');  ?>" method="POST">
+            <form action="<?php echo URL . '/' . (isset($this->page->id) ? 'page/updatepage' : 'page/addpage');  ?>" method="POST">
                 <label>Slug</label>
                 <input type="text" name="slug" value="<?php echo (isset($this->page->slug) ? $this->escapeString($this->page->slug) : ''); ?>" required />
                 <p class="error"><small><?php echo (isset($this->error["slug"]) ? $this->error["slug"] : ''); ?></small></p>

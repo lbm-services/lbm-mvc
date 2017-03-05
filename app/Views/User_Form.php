@@ -1,10 +1,10 @@
-<?php 
+<?php
 if (isset($this->user->id)) {
         $action = 'admin/updateuser' ;
         $submit = 'submit_update_user';
         $hidden = "<input type=\"hidden\" name=\"id\" value=\"".$this->user->id ."\"/>";
         $pass   = '';
-    
+
 } else {
     $action = 'admin/adduser';
     $submit = 'submit_add_user';
@@ -17,7 +17,7 @@ if (isset($this->user->id)) {
 ?>
 
 <div class="box">
-     <form action="<?php echo URL . $action  ?>" method="POST">
+     <form action="<?php echo URL . '/' .   $action  ?>" method="POST">
             <label>Firstname</label>
             <input type="text" name="firstname" value="<?php echo (isset($this->user->firstname) ? htmlspecialchars($this->user->firstname, ENT_QUOTES, 'UTF-8') : ''); ?>" required />
             <p class="error"><small><?php echo (isset($this->error["firstname"]) ?  $this->error["firstname"] : ''); ?></small></p>
